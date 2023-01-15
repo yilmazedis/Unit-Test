@@ -6,6 +6,9 @@
 - A stub is a simple fake object. It just makes sure test runs smoothly.
 - A mock is a smarter stub. You verify your test passes through it.
 
+## Dummy
+A dummy test double is a test double that doesn't do anything, it is used when a function or method takes an argument that is not used in the implementation but still needs to be passed in order for the code to run
+
 ## General
 - Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
 - Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an InMemoryTestDatabase is a good example).
