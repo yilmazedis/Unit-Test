@@ -1,5 +1,65 @@
-// 1. Testing a simple function:
+import Nimble
+import Quick
 
+/*
+
+Using Nimble and Quick together can provide a powerful and efficient testing workflow in your Swift projects.
+
+Quick is a behavior-driven development (BDD) framework that allows you to define and organize your test cases in a clear and descriptive manner, while Nimble provides a range of useful matchers and other testing utilities for performing assertions and expectations within your tests.
+
+However, it's not strictly necessary to use both frameworks together. You can use Nimble as a standalone testing framework, or you can use a different testing framework with Quick if you prefer. The important thing is to choose a testing framework that works well for your project and helps you write high-quality, reliable tests.
+
+Ultimately, the choice of testing framework(s) to use depends on the specific needs and requirements of your project, and on your personal preferences as a developer.
+
+*/
+
+class MyTests: QuickSpec {
+    override func spec() {
+        describe("a calculator") {
+            var calculator: Calculator!
+
+            beforeEach {
+                calculator = Calculator()
+            }
+
+            context("when adding numbers") {
+                it("should return the correct result") {
+                    let result = calculator.add(2, 3)
+                    expect(result) == 5
+                }
+
+                it("should be commutative") {
+                    let result1 = calculator.add(2, 3)
+                    let result2 = calculator.add(3, 2)
+                    expect(result1) == result2
+                }
+            }
+
+            context("when subtracting numbers") {
+                it("should return the correct result") {
+                    let result = calculator.subtract(5, 3)
+                    expect(result) == 2
+                }
+            }
+        }
+    }
+}
+
+class MyTests: QuickSpec {
+    override func spec() {
+        describe("a string") {
+            it("should be equal to another string") {
+                let string1 = "hello"
+                let string2 = "hello"
+                expect(string1) == string2
+            }
+        }
+    }
+}
+
+// Fill you spec as you wish
+
+// 1. Testing a simple function:
 describe("Calculator") {
   context("when adding two numbers") {
     it("returns the correct result") {
