@@ -7,10 +7,6 @@ Using Nimble and Quick together can provide a powerful and efficient testing wor
 
 Quick is a behavior-driven development (BDD) framework that allows you to define and organize your test cases in a clear and descriptive manner, while Nimble provides a range of useful matchers and other testing utilities for performing assertions and expectations within your tests.
 
-However, it's not strictly necessary to use both frameworks together. You can use Nimble as a standalone testing framework, or you can use a different testing framework with Quick if you prefer. The important thing is to choose a testing framework that works well for your project and helps you write high-quality, reliable tests.
-
-Ultimately, the choice of testing framework(s) to use depends on the specific needs and requirements of your project, and on your personal preferences as a developer.
-
 */
 
 class MyTests: QuickSpec {
