@@ -3,7 +3,7 @@
 ## Stub vs Mock
 - Stubs don't fail your tests, mock can.
 - Unlike mocks, stubs do not have pre-programmed expectations that could fail your test.
-- A stub is a simple fake object. It just makes sure test runs smoothly.
+- A stub is a simple fake object. It just makes sure test runs smoothly. Just say, with stub you test your Test
 - A mock is a smarter stub. You verify your test passes through it.
 
 ## Dummy
